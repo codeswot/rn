@@ -1,13 +1,24 @@
-import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import React from 'react'
+import { SafeAreaView, StyleSheet, useColorScheme, View, Text } from 'react-native'
+import CarouselCards from '../components/carouselCard'
 
-export class HomeScreen extends Component {
-  render() {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!</Text>
-      </View>     )
-  }
+export default function HomeScreen() {
+    const isDarkMode = useColorScheme() === "dark";
+  return (
+      
+    <SafeAreaView style={styles.container}>
+       <View>
+           <Text style={{fontSize: 25, fontWeight: 'bold', color: '#fff'}}>FLIXY</Text>
+        </View>
+      <CarouselCards />
+    </SafeAreaView>
+  );
 }
 
-export default HomeScreen
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 30
+  },
+});

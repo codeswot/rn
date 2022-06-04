@@ -3,36 +3,52 @@ import {
   SafeAreaView,
   StatusBar,
   StyleSheet,
-  Text,
   useColorScheme,
   View,
 } from "react-native";
-import { Colors } from "react-native/Libraries/NewAppScreen";
+import HomeScreen from "./view/screens/homeScreen";
+import OnBoardingScreen from "./view/screens/onBoardingScreen";
 
-export class Main extends Component {
-  backgroundStyle = {};
-  isDarkMode = useColorScheme() === "dark";
-  componentDidMount() {
-    this.backgroundStyle = {
-      backgroundColor: this.isDarkMode ? Colors.darker : Colors.lighter,
-    };
-  }
-  render() {
-    return (
-      <SafeAreaView style={this.backgroundStyle}>
-        <StatusBar
-          barStyle={this.isDarkMode ? "light-content" : "dark-content"}
-        />
+// export class Main extends Component {
+//   backgroundStyle = {};
+//   isDarkMode = useColorScheme() === "dark";
+//   componentDidMount() {
+//     this.backgroundStyle = {
+//       backgroundColor: this.isDarkMode ? Colors.darker : Colors.lighter,
+//     };
+//   }
+//   render() {
+//     return (
+//       <SafeAreaView style={this.backgroundStyle}>
+//         <StatusBar
+//           barStyle={this.isDarkMode ? "light-content" : "dark-content"}
+//         />
 
-        <View
-          style={{
-            backgroundColor: this.isDarkMode ? Colors.black : Colors.white,
-          }}
-          
-        ></View>
-      </SafeAreaView>
-    );
-  }
+//         <View
+//           style={{
+//             backgroundColor: this.isDarkMode ? Colors.black : Colors.white,
+//           }}
+
+//         ></View>
+//       </SafeAreaView>
+//     );
+//   }
+// }
+
+export default function Main() {
+  const backgroundStyle = {};
+  const isDarkMode = useColorScheme() === "dark";
+  return (
+    <SafeAreaView style={backgroundStyle}>
+      <StatusBar
+        barStyle={isDarkMode ? "light-content" : "dark-content"}
+      />
+      <View>
+        {/* <OnBoardingScreen /> */}
+        <HomeScreen />
+      </View>
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -54,4 +70,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Main;
