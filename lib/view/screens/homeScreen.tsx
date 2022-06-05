@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { SafeAreaView, StyleSheet, View, Text, ScrollView } from 'react-native'
-import { Appbar } from 'react-native-paper';
-import { globalStyles } from '../../styles/globalStyle';
 import CarouselCards from '../components/carouselCard'
 import { AppbarHeader } from '../components/headerAppBar';
 import HomeWatchListScetion from '../components/watchListSection';
@@ -15,6 +13,7 @@ export default class HomeScreen extends Component {
                     <CarouselCards />
                     <HomeWatchListScetion
                         title={'Watchlist'}
+                        navigation={this.props.navigation}
                         watchList={[
                             {
                                 id: '1',
@@ -35,6 +34,7 @@ export default class HomeScreen extends Component {
                     />
                     <HomeWatchListScetion
                         title={'Adventure'}
+                        navigation={this.props.navigation}
                         watchList={[
                             {
                                 id: '1',

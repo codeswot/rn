@@ -8,8 +8,8 @@ export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.6)
 
 const CarouselCardItem = ({ item, index }) => {
   return (
-
-    <View style={styles.container} key={index}>
+   
+      <View style={styles.container} key={index}>
       <Image
         source={{ uri: item.image }}
         style={styles.image}
@@ -24,6 +24,7 @@ const CarouselCardItem = ({ item, index }) => {
         <Text style={{ paddingTop: 10, paddingLeft: 6 }}>2021</Text>
       </View>
     </View>
+
   )
 }
 

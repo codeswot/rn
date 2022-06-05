@@ -4,7 +4,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/Ionicons";
 
 export default class HomeWatchListScetion extends Component {
-
     render() {
 
         return (
@@ -13,8 +12,6 @@ export default class HomeWatchListScetion extends Component {
                     <Text style={styles.title}>{this.props.title}</Text>
                     <Icon name="person" color={'black'} />
                 </View>
-
-
                 <FlatList
                     data={this.props.watchList}
                     horizontal={true}

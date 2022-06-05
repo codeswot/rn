@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, View } from "react-native"
-import Carousel, { Pagination } from 'react-native-snap-carousel'
+import Carousel from 'react-native-snap-carousel'
 import CarouselCardItem, { SLIDER_WIDTH, ITEM_WIDTH } from './carouselCardItem'
 import data from './carouselData'
 
