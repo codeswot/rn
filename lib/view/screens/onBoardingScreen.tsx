@@ -22,7 +22,7 @@ export default class OnBoardingScreen extends Component {
           </Text>
         </View>
         <RoundedButton onPress={() => {
-          //Navigate to home screen
+          this.props.navigation.navigate('menu');
         }} />
       </View>
 

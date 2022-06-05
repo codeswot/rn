@@ -1,13 +1,12 @@
+import { NavigationContainer } from "@react-navigation/native";
 import React, { Component } from "react";
 import {
-  SafeAreaView,
-  StatusBar,
   StyleSheet,
   useColorScheme,
-  View,
 } from "react-native";
-import HomeScreen from "./view/screens/homeScreen";
-import OnBoardingScreen from "./view/screens/onBoardingScreen";
+import AppStack from "../routes/appStack";
+
+import Menu from "./view/screens/menuScreen";
 
 // export class Main extends Component {
 //   backgroundStyle = {};
@@ -39,15 +38,10 @@ export default function Main() {
   const backgroundStyle = {};
   const isDarkMode = useColorScheme() === "dark";
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? "light-content" : "dark-content"}
-      />
-      <View>
-        {/* <OnBoardingScreen /> */}
-        <HomeScreen />
-      </View>
-    </SafeAreaView>
+    // <Menu />
+    <NavigationContainer>
+      <AppStack />
+    </NavigationContainer>
   );
 }
 

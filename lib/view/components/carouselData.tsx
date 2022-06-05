@@ -1,18 +1,18 @@
 const data = [
     {
-      title: "Aenean leo",
-      body: "Ut tincidunt tincidunt",
-      imgUrl: "https://picsum.photos/id/11/200/300",
+      title: "Rampage",
+      body: "Action Movie",
+      image: "https://i.pinimg.com/564x/d5/70/db/d570dbf55104237abb0ee77b575f7187.jpg",
     },
     {
-      title: "In turpis",
-      body: "Aenean ut eros ",
-      imgUrl: "https://picsum.photos/id/10/200/300",
+      title: "Aquaman",
+      body: "Ocean, King",
+      image: "https://i.pinimg.com/564x/4f/04/29/4f0429c11d7b2822cbdcf5a45eae8111.jpg",
     },
     {
-      title: "Lorem Ipsum",
-      body: "Phasellus ullamcorper ipsum",
-      imgUrl: "https://picsum.photos/id/12/200/300",
+      title: "Joker",
+      body: "Funny",
+      image: "https://i.pinimg.com/564x/49/63/4d/49634d78e2babb14d2358addad1a4457.jpg",
     },
   ];
   

@@ -1,16 +1,13 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, GestureResponderEvent } from 'react-native'
 
-type MyProps = {
-    onPress: ((event: GestureResponderEvent) => void) | undefined
-}
 
-export class RoundedButton extends Component<MyProps> {
+export class RoundedButton extends Component {
     
     render() {
         return (
             <TouchableOpacity onPress={this.props.onPress} style={styles.buttonContainer}>
-                <Text style={styles.buttonTextStyle}>Continue To App</Text>
+                <Text style={styles.buttonTextStyle}>{this.props.title}</Text>
             </TouchableOpacity>
         );
     }
@@ -19,12 +16,12 @@ export class RoundedButton extends Component<MyProps> {
 const styles = StyleSheet.create({
     buttonContainer: {
         elevation: 0,
-        backgroundColor: "#C75146",
+        backgroundColor: "#ff3333",
         borderRadius: 50,
-        paddingVertical: 20,
-        paddingHorizontal: 12,
-        marginHorizontal: 35,
-        marginTop: 40,
+        paddingVertical: 12,
+        width: 230,
+        marginHorizontal: 15,
+        marginTop: 15,
 
     },
     buttonTextStyle: {
