@@ -1,38 +1,48 @@
+import { NavigationContainer } from "@react-navigation/native";
 import React, { Component } from "react";
 import {
-  SafeAreaView,
-  StatusBar,
   StyleSheet,
-  Text,
   useColorScheme,
-  View,
 } from "react-native";
-import { Colors } from "react-native/Libraries/NewAppScreen";
+import AppStack from "../routes/appStack";
 
-export class Main extends Component {
-  backgroundStyle = {};
-  isDarkMode = useColorScheme() === "dark";
-  componentDidMount() {
-    this.backgroundStyle = {
-      backgroundColor: this.isDarkMode ? Colors.darker : Colors.lighter,
-    };
-  }
-  render() {
-    return (
-      <SafeAreaView style={this.backgroundStyle}>
-        <StatusBar
-          barStyle={this.isDarkMode ? "light-content" : "dark-content"}
-        />
+import Menu from "./view/screens/menuScreen";
 
-        <View
-          style={{
-            backgroundColor: this.isDarkMode ? Colors.black : Colors.white,
-          }}
-          
-        ></View>
-      </SafeAreaView>
-    );
-  }
+// export class Main extends Component {
+//   backgroundStyle = {};
+//   isDarkMode = useColorScheme() === "dark";
+//   componentDidMount() {
+//     this.backgroundStyle = {
+//       backgroundColor: this.isDarkMode ? Colors.darker : Colors.lighter,
+//     };
+//   }
+//   render() {
+//     return (
+//       <SafeAreaView style={this.backgroundStyle}>
+//         <StatusBar
+//           barStyle={this.isDarkMode ? "light-content" : "dark-content"}
+//         />
+
+//         <View
+//           style={{
+//             backgroundColor: this.isDarkMode ? Colors.black : Colors.white,
+//           }}
+
+//         ></View>
+//       </SafeAreaView>
+//     );
+//   }
+// }
+
+export default function Main() {
+  const backgroundStyle = {};
+  const isDarkMode = useColorScheme() === "dark";
+  return (
+    // <Menu />
+    <NavigationContainer>
+      <AppStack />
+    </NavigationContainer>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -54,4 +64,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Main;
